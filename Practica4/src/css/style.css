@@ -1,0 +1,53 @@
+header{
+  background: lightskyblue;
+  text-align: center;
+}
+
+header>h2{
+  text-shadow: 2px 2px 8px;
+}
+
+input[type="text"]{
+  width: 50px;
+}
+
+.hor-minimalist-b{
+  font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+  font-size: 1em;
+  background: #fff;
+  margin-top : 2em;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-Comision, .table-Comision2{
+  background: rgb(157, 157, 255);
+}
+
+.table-Comision2 tbody tr:nth-child(4) td:first-child {
+  color: rgb(0, 31, 82);
+}
+
+.hor-minimalist-b th {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #039;
+  width: 200px;
+  padding: 10px 5px;
+  border-bottom: 2px solid #6678b1;
+}
+
+.hor-minimalist-b td{
+  color: #669;
+  padding: 6px 8px;
+  height: 40px;
+  border-bottom: 2px solid #669;
+}
+
+.hor-minimalist-b tbody tr:hover td{
+  color: #009;
+}
+
+input[type="radio"]{
+  width: 14px;
+}

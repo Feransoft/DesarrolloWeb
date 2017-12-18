@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(http://static.websguru.com.ar/var/m_8/82/823/72305/1049000-la-redonda-pizzeria-fondo.w1900.jpg);
+}
+
+header{
+    background-color:#07910e;
+    margin-top: -20px;
+    padding: 8px;
+    height: 75px;
+    text-align: center;
+}
+
+h2 , h3{
+    color: white;
+    text-align: center;
+    font-family: 'Lobster', sans-serif;
+}
+
+h3{
+    margin-top: 0px;
+}
+
+main {
+    float: left;
+}
+
+article header {
+    height: 50px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+main section:first-child article {
+    width: 220px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-left: 8px;
+    float: left;
+    border-radius: 5px;
+    box-shadow:  5px 5px 5px #535353;
+    text-align: center;
+    background-color: white;
+    font-family: 'Lobster', sans-serif;
+}
+
+span {
+    display: block;
+}
+
+section:nth-child(2){
+    float: left;
+}
+
+section:nth-child(2) article ul {
+    list-style-type: none;
+    margin-top: 30px;
+    font-family: 'Lobster', sans-serif;
+    font-size: 1.5em;
+    overflow-y: scroll;
+    height: 300px;
+}
+
+section:nth-child(2) article ul li{
+    text-align: center;
+    border: 2px solid black;
+    font-family: 'Lobster', sans-serif;
+    box-shadow:  5px 5px 5px #535353;
+}
+
+section:nth-child(2) article ul li:hover {
+    cursor: pointer;
+    background-color: #07910e;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    color: white;
+}
+
+main section:first-child::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+main section:nth-child(3){
+    float: left;
+    padding: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 20px;
+    font-family: 'Lobster', sans-serif;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+
+tr:hover {background-color:#f5f5f5;}
+
+section:nth-child(3) table button{
+    border: none;
+    border-radius: 15px;
+}
+
+section:nth-child(3) table button:hover{
+    cursor: pointer;
+    background-color: #d9534f;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.disable{
+    pointer-events:none;
+    opacity:0.4;
+}
+
+.enable{
+    cursor: pointer;
+    opacity:0;
+}
+
+section:nth-child(4) article {
+    padding: 20px;
+}

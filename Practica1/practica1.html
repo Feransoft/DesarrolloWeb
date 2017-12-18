@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CANVAS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styleCanvas.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <header class="row" id="header">
+            <h2 class="col-xs-4 col-md-4 col-centrada">Canvas</h2>
+        </header>
+        <main class="row">
+            <div class="col-xs-4 col-md-4" id="toolsCanvas">
+                <div class="form-group row">
+                    <label for="example-color-input" class="col-xs-2 col-md-2 col-form-label">Color</label>
+                    <div class="col-xs-10 col-md-10">
+                        <input class="form-control" type="color" value="#000000" id="color">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="example-color-input" class="col-xs-2 col-md-2 col-form-label">Figuras</label>
+                    <div class="col-xs-10 col-md-10">
+                        <select id="selFigure" class="form-control">
+                            <option value="line">Linea</option>
+                            <option value="rectangle">Rectangulo</option>
+                            <option value="pencil">Lapiz</option>
+                            <option value="circle">Circulo o Ovalo</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-xs-10 col-md-10">
+                        <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="5" data-slider-step="1" data-slider-value="0"/>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-xs-12 col-md-10">
+                        <button type="button" id="button" class="btn btn-danger">BORRAR</button>
+                    </div>
+                </div>
+            </div>
+            <div id="sketch" class="col-xs-8 col-md-8">
+                <canvas id="canvas"></canvas>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.js"></script>
+    <script src="drawing.js"></script>
+</body>
+
+</html>

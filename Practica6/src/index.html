@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Agenda</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">  
+</head>
+
+<body>
+  <main class="row">
+    <section class="col-xs-6">
+      <article class="col-xs-8 col-xs-offset-2">
+        <h2>Agenda</h2>
+        <form>
+          <div class="form-group">
+            <label for="id">id:</label>
+            <input type="number" class="form-control" id="id">
+          </div>
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="last-name">Apellido:</label>
+            <input type="text" class="form-control" id="last-name">
+          </div>
+          <div class="form-group">
+            <label for="gender">Género</label>
+            <select class="form-control" id="gender">
+              <option>Hombre</option>
+              <option>Mujer</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="birthday">Fecha de nacimiento:</label>
+            <input type="text" class="form-control" id="birthday">
+          </div>
+          <div class="form-group">
+            <label for="phone">Número de teléfono:</label>
+            <input type="text" class="form-control" id="phone">
+          </div>
+          <button type="button" class="btn btn-default" id="sendDates">Submit</button>
+        </form>
+      </article>
+    </section>
+    <section class="col-xs-6">
+      <article class="row">
+        <div class="panel panel-default panel-table">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col col-xs-6">
+                <h3 class="panel-title">Contactos</h3>
+              </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <table class="table table-striped table-bordered table-list">
+              <thead>
+                <tr>
+                  <th>
+                    <em class="fa fa-cog"></em>
+                  </th>
+                  <th class="hidden-xs" id="divID">ID</th>
+                  <th id="divNOMBRE">Nombre</th>
+                  <th id="divAPELLIDOS">Apellido</th>
+                  <th>Género</th>
+                  <th>Cumpleaños</th>
+                  <th>Teléfono</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">
+                    <button type="button" class="btn btn-sm btn-primary btn-danger">
+                      <em class="fa fa-trash"></em>
+                    </button>
+                  </td>
+                  <td class="hidden-xs">683</td>
+                  <td>SERAFIN</td>
+                  <td>GARCIA GARRIDO</td>
+                  <td>HOMBRE</td>
+                  <td>18/04/1993</td>
+                  <td>626185114</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+<script src="../node_modules/moment/moment.js"></script>
+<script src="js/models/person.model.js"></script>
+<script src="js/models/agenda.model.js"></script>
+<script src="js/services/agenda.service.js"></script>
+<script src="js/controller.js"></script>
+<script>
+  controller.init(new AgendaService());
+
+</script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="hangman.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Hangman</title>
+</head>
+
+<body>
+    <header>
+        <h1>Practica2: Ahorcado</h1>
+    </header>
+    <main>
+        <section>
+            <article>
+                <div class="row">
+                    <input type="text" id="txtUser" class="form-control" size="15">
+                    <button type="button" id="butLogin" class="btn btn-primary">Login</button>
+                </div>
+                <div id="divButtons"></div>
+                <div class="divHold" id="hold"></div>
+                <p id="myLives">Tienes 10 vidas</p>
+            </article>
+            <article class="articleCanvas">
+                <canvas id="canvasStickman" width="300" height="150"></canvas>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <header>
+            <h1>Fernando Rueda Muñoz</h1>
+        </header>
+    </footer>
+</body>
+<script src="js/ajaxCG.js"></script>
+<script src="controler.js"></script>
+<script src="service.js"></script>
+<script>
+    service.constructor();
+    controller.constructor(service);
+    //console.log(controller.toString());
+</script>
+
+</html>

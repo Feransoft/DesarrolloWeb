@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Practica 4</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container">
+  <header class="row">
+    <h2>TABLAS</h2>
+  </header>
+  <section class="row">
+    <article class="col-lg-5">
+      <table class="hor-minimalist-b">
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="table-product">
+        </tbody>
+      </table>
+    </article>
+    <article class="col-lg-5 col-lg-offset-1">
+      <table class="hor-minimalist-b">
+        <thead>
+          <tr>
+            <th scope="col">Producto</th>
+            <th scope="col">Total</th>
+            <th scope="col">Unidades</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody id="table-calculatePrice">
+        </tbody>
+      </table>
+    </article>
+  </section>
+  <section class="row">
+    <article class="col-lg-5 col-lg-offset-1">
+      <table class="hor-minimalist-b table-Comision">
+        <thead>
+          <tr>
+            <th scope="col">Como Pagar</th>
+            <th scope="col">Comisión</th>
+          </tr>
+        </thead>
+        <tbody>
+          <form>
+            <tr>
+              <td>
+                <input name="optradio" type="radio" value="5">
+                <label for="lp-fb-CreditCard">Tarjeta de Crédito</label>
+              </td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>
+                <input name="optradio" type="radio" value="10.5">
+                <label for="lp-fb-Paypal">Paypal</label>
+              </td>
+              <td>10,5</td>
+            </tr>
+            <tr>
+              <td>
+                <input name="optradio" type="radio" value="2">
+                <label for="lp-fb-bankTransfer">Transferencia Bancaria</label>
+              </td>
+              <td>2</td>
+            </tr>
+          </form>
+        </tbody>
+      </table>
+    </article>
+    <article class="col-lg-5">
+      <table class="hor-minimalist-b table-Comision2">
+        <thead>
+          <tr>
+            <th scope="col">Confirmaficion</th>
+            <th scope="col">Totales</th>
+          </tr>
+        </thead>
+        <tbody id="table-Comision-Total">
+          <tr>
+            <td>Precio</td>
+            <td id="PriceComision"></td>
+          </tr>
+          <tr>
+            <td>Metodo</td>
+            <td id="PayComision"></td>
+          </tr>
+          <tr>
+            <td>Comision</td>
+            <td id="Comision"></td>
+          </tr>
+          <tr>
+            <td>Coste Total</td>
+            <td id="TotalComision"></td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  </section>
+</body>
+<script src="js/models/producto.models.js"></script>
+<script src="js/models/order.model.js"></script>
+
+<script src="js/service/producto.service.js"></script>
+<script src="js/service/order.service.js"></script>
+
+<script src="js/app.setting.js"></script>
+<script src="js/controller.js"></script>
+<script>
+  const productSer = new productoService(appSettings.productos);
+  const orderService = new OrderService();
+
+  controller.init(productSer, orderService);
+</script>
+
+</html>

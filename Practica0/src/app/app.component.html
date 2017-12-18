@@ -1,0 +1,76 @@
+<div class="container">
+  <div class="col-md-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Formulario
+      </div>
+      <div class="panel-body">
+        <form action="">
+          <div class="form-group">
+            <label for="country">Elige pais:</label>
+            <select class="form-control" id="selCountry">
+              <option>ESPAÑA</option>
+              <option>USA</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="name">Nombre:</label>
+            <input type="text" class="form-control" name="name" id="name" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+              [(ngModel)]="model.name" name="name" minlength="4" #name="ngModel">
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+              <div [hidden]="!name.hasError('required')">Campo obligatorio</div>
+              <div [hidden]="!name.hasError('pattern')">Introduzca un nombre valido</div>
+              <div [hidden]="!name.hasError('minlength')">Introduzca un nombre mas largo</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Apellido:</label>
+            <input type="text" class="form-control" name="lastName" id="lastName" required pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"
+              [(ngModel)]="model.lastName" #lastName="ngModel">
+            <div [hidden]="lastName.valid || lastName.pristine" class="alert alert-danger">
+              <div [hidden]="!lastName.hasError('required')">Campo obligatorio</div>
+              <div [hidden]="!lastName.hasError('pattern')">Introduzca un apellido valido</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Age">Edad:</label>
+            <input type="text" class="form-control" name="age" id="age" required pattern="^1[8-9]\d{1}$|[2-9]\d{1}$|1[0-1]\d{1}$|120$"
+              [(ngModel)]="model.age" #age="ngModel">
+            <div [hidden]="age.valid || age.pristine" class="alert alert-danger">
+              <div [hidden]="!age.hasError('required')">Campo obligatorio</div>
+              <div [hidden]="!age.hasError('pattern')">Introduzca una edad valida</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="birthdate">Fecha de Nacimiento:</label>
+            <input type="text" class="form-control" name="birthdate " id="birthdate" required pattern="^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$"
+              [(ngModel)]="model.birthdate" #birthdate="ngModel">
+            <div [hidden]="birthdate.valid || birthdate.pristine" class="alert alert-danger">
+              <div [hidden]="!birthdate.hasError('required')">Campo obligatorio</div>
+              <div [hidden]="!birthdate.hasError('pattern')">Introduzca una fecha valida</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="postalCode">Código Postal:</label>
+            <input type="text" class="form-control" name="postalCode" id="postalCode" required pattern="(0[1-9]{1}|[1-4]{1}\d{1}|5[1-2]{1})\d{3}$"
+              [(ngModel)]="model.postalCode" #postalCode="ngModel">
+            <div [hidden]="postalCode.valid || postalCode.pristine" class="alert alert-danger">
+              <div [hidden]="!postalCode.hasError('required')">Campo obligatorio</div>
+              <div [hidden]="!postalCode.hasError('pattern')">Introduzca un codigo postal valido</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phoneNumber">Numero de Teléfono:</label>
+            <input type="text" class="form-control" name="phoneNumber" id="phoneNumber" required pattern="^((\+34|0034|34)\s?)?[6|7|9](\d{8}$|\d{2}\s\d{3}\s\d{3}$|\d{2}\s\d{2}\s\d{2}\s\d{2}$)"
+              [(ngModel)]="model.phoneNumber" #phoneNumber="ngModel">
+            <div [hidden]="phoneNumber.valid || phoneNumber.pristine" class="alert alert-danger">
+              <div [hidden]="!phoneNumber.hasError('required')">Campo obligatorio</div>
+              <div [hidden]="!phoneNumber.hasError('pattern')">Introduzca un codigo postal valido</div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-default">Confirmar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

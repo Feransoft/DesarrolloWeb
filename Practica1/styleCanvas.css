@@ -1,0 +1,24 @@
+#sketch {
+    border: 2px solid black;
+    padding: 0px 0px;
+    height: 300px;
+}
+
+#tmp_canvas {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    cursor: crosshair;
+}
+
+.col-centrada{
+    float: none;
+    margin: 0 auto;
+    width: max-content;
+}
+
+main {
+    margin-top: 20px;
+}
